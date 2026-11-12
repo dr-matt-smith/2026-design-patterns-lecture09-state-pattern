@@ -1,0 +1,188 @@
+<svg version="1.1" baseProfile="full" width="1023.0" height="408.0" viewBox="0 0 1023 408" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<desc >#background: #ffffff
+	#direction: down
+	#spacing: 50
+	#padding: 10
+	#edgeMargin: 6
+	#.interface: fill=#e8f1fb italic
+	#.new: fill=#ffe9a8 bold
+	[&lt;interface&gt;«interface» State|insertQuarter();ejectQuarter();turnCrank();dispense();refill()]
+	[«interface» State] &lt;:-- [SoldState|insertQuarter();ejectQuarter();turnCrank();dispense();refill()]
+	[«interface» State] &lt;:-- [SoldOutState|insertQuarter();ejectQuarter();turnCrank();dispense();refill()]
+	[«interface» State] &lt;:-- [NoQuarterState|insertQuarter();ejectQuarter();turnCrank();dispense();refill()]
+	[«interface» State] &lt;:-- [HasQuarterState|insertQuarter();ejectQuarter();turnCrank();dispense();refill()]
+	[«interface» State] &lt;:-- [&lt;new&gt;WinnerState|insertQuarter();ejectQuarter();turnCrank();dispense();refill()]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="#ffffff">
+				<rect x="0.0" y="0.0" height="408.0" width="1023.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(10, 10)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M367.8 100.8 L74 174 L74 199 L74.0 199.0 " fill="none"></path>
+					</g>
+					<g fill="#eee8d5">
+						<path d="M369.4 107.3 L367.8 100.8 L366.2 94.3 L384.0 96.8 Z"></path>
+					</g>
+					<g stroke-dasharray="6 6">
+						<path d="M369.1 126.1 L272 174 L272 199 L272.0 199.0 " fill="none"></path>
+					</g>
+					<g fill="#eee8d5">
+						<path d="M372.0 132.1 L369.1 126.1 L366.1 120.1 L384.0 118.7 Z"></path>
+					</g>
+					<g stroke-dasharray="6 6">
+						<path d="M473.5 165.7 L473.5 174 L473.5 199 L473.5 199.0 " fill="none"></path>
+					</g>
+					<g fill="#eee8d5">
+						<path d="M480.2 165.7 L473.5 165.7 L466.8 165.7 L473.5 149.0 Z"></path>
+					</g>
+					<g stroke-dasharray="6 6">
+						<path d="M578.1 124.2 L683 174 L683 199 L683.0 199.0 " fill="none"></path>
+					</g>
+					<g fill="#eee8d5">
+						<path d="M580.9 118.1 L578.1 124.2 L575.2 130.2 L563.0 117.0 Z"></path>
+					</g>
+					<g stroke-dasharray="6 6">
+						<path d="M579.2 99.8 L889 174 L889 199 L889.0 199.0 " fill="none"></path>
+					</g>
+					<g fill="#eee8d5">
+						<path d="M580.8 93.3 L579.2 99.8 L577.7 106.3 L563.0 95.9 Z"></path>
+					</g>
+					<g data-name="«interface» State">
+						<g fill="#e8f1fb" stroke="#33322E" data-name="«interface» State">
+							<rect x="390.0" y="6.0" height="137.0" width="167.0" data-name="«interface» State"></rect>
+							<path d="M390.0 42.0 L557.0 42.0" fill="none" data-name="«interface» State"></path>
+						</g>
+						<g transform="translate(390, 6)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="italic" data-name="«interface» State" data-compartment="0">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="center" data-name="«interface» State" data-compartment="0">
+								<text x="73.5" y="14.1" stroke="none" text-anchor="middle" data-name="«interface» State" data-compartment="0">«interface» State</text>
+								
+							</g>
+						</g>
+						<g transform="translate(390, 42)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="«interface» State" data-compartment="1">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="left" data-name="«interface» State" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="«interface» State" data-compartment="1">insertQuarter()</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="«interface» State" data-compartment="1">ejectQuarter()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="«interface» State" data-compartment="1">turnCrank()</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="«interface» State" data-compartment="1">dispense()</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="«interface» State" data-compartment="1">refill()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SoldState">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SoldState">
+							<rect x="6.0" y="205.0" height="137.0" width="136.0" data-name="SoldState"></rect>
+							<path d="M6.0 241.0 L142.0 241.0" fill="none" data-name="SoldState"></path>
+						</g>
+						<g transform="translate(6, 205)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SoldState" data-compartment="0">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="center" data-name="SoldState" data-compartment="0">
+								<text x="58.0" y="14.1" stroke="none" text-anchor="middle" data-name="SoldState" data-compartment="0">SoldState</text>
+								
+							</g>
+						</g>
+						<g transform="translate(6, 241)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="SoldState" data-compartment="1">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="left" data-name="SoldState" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="SoldState" data-compartment="1">insertQuarter()</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="SoldState" data-compartment="1">ejectQuarter()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="SoldState" data-compartment="1">turnCrank()</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="SoldState" data-compartment="1">dispense()</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="SoldState" data-compartment="1">refill()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SoldOutState">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SoldOutState">
+							<rect x="204.0" y="205.0" height="137.0" width="136.0" data-name="SoldOutState"></rect>
+							<path d="M204.0 241.0 L340.0 241.0" fill="none" data-name="SoldOutState"></path>
+						</g>
+						<g transform="translate(204, 205)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SoldOutState" data-compartment="0">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="center" data-name="SoldOutState" data-compartment="0">
+								<text x="58.0" y="14.1" stroke="none" text-anchor="middle" data-name="SoldOutState" data-compartment="0">SoldOutState</text>
+								
+							</g>
+						</g>
+						<g transform="translate(204, 241)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="SoldOutState" data-compartment="1">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="left" data-name="SoldOutState" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="SoldOutState" data-compartment="1">insertQuarter()</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="SoldOutState" data-compartment="1">ejectQuarter()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="SoldOutState" data-compartment="1">turnCrank()</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="SoldOutState" data-compartment="1">dispense()</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="SoldOutState" data-compartment="1">refill()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="NoQuarterState">
+						<g fill="#eee8d5" stroke="#33322E" data-name="NoQuarterState">
+							<rect x="402.0" y="205.0" height="137.0" width="143.0" data-name="NoQuarterState"></rect>
+							<path d="M402.0 241.0 L545.0 241.0" fill="none" data-name="NoQuarterState"></path>
+						</g>
+						<g transform="translate(402, 205)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NoQuarterState" data-compartment="0">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="center" data-name="NoQuarterState" data-compartment="0">
+								<text x="61.5" y="14.1" stroke="none" text-anchor="middle" data-name="NoQuarterState" data-compartment="0">NoQuarterState</text>
+								
+							</g>
+						</g>
+						<g transform="translate(402, 241)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="NoQuarterState" data-compartment="1">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="left" data-name="NoQuarterState" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="NoQuarterState" data-compartment="1">insertQuarter()</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="NoQuarterState" data-compartment="1">ejectQuarter()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="NoQuarterState" data-compartment="1">turnCrank()</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="NoQuarterState" data-compartment="1">dispense()</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="NoQuarterState" data-compartment="1">refill()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HasQuarterState">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HasQuarterState">
+							<rect x="607.0" y="205.0" height="137.0" width="152.0" data-name="HasQuarterState"></rect>
+							<path d="M607.0 241.0 L759.0 241.0" fill="none" data-name="HasQuarterState"></path>
+						</g>
+						<g transform="translate(607, 205)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HasQuarterState" data-compartment="0">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="center" data-name="HasQuarterState" data-compartment="0">
+								<text x="66.0" y="14.1" stroke="none" text-anchor="middle" data-name="HasQuarterState" data-compartment="0">HasQuarterState</text>
+								
+							</g>
+						</g>
+						<g transform="translate(607, 241)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="HasQuarterState" data-compartment="1">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="left" data-name="HasQuarterState" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HasQuarterState" data-compartment="1">insertQuarter()</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HasQuarterState" data-compartment="1">ejectQuarter()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HasQuarterState" data-compartment="1">turnCrank()</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="HasQuarterState" data-compartment="1">dispense()</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="HasQuarterState" data-compartment="1">refill()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="WinnerState">
+						<g fill="#ffe9a8" stroke="#33322E" data-name="WinnerState">
+							<rect x="821.0" y="205.0" height="137.0" width="136.0" data-name="WinnerState"></rect>
+							<path d="M821.0 241.0 L957.0 241.0" fill="none" data-name="WinnerState"></path>
+						</g>
+						<g transform="translate(821, 205)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="WinnerState" data-compartment="0">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="center" data-name="WinnerState" data-compartment="0">
+								<text x="58.0" y="14.1" stroke="none" text-anchor="middle" data-name="WinnerState" data-compartment="0">WinnerState</text>
+								
+							</g>
+						</g>
+						<g transform="translate(821, 241)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="WinnerState" data-compartment="1">
+							<g transform="translate(10, 10)" fill="#33322E" text-align="left" data-name="WinnerState" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="WinnerState" data-compartment="1">insertQuarter()</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="WinnerState" data-compartment="1">ejectQuarter()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="WinnerState" data-compartment="1">turnCrank()</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="WinnerState" data-compartment="1">dispense()</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="WinnerState" data-compartment="1">refill()</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

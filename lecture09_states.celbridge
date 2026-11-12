@@ -1,0 +1,14 @@
+[celbridge]
+celbridge-version = "1.7.0"
+project-version = "0.1.0"
+
+[celbridge.explorer]
+exclude = [".gitignore", ".DS_Store", "Thumbs.db", "desktop.ini"]
+
+[celbridge.packages]
+folders = ["tools"]
+
+[[shortcut]]
+resource = "state_charts.story"
+icon = "bs-book"
+open-on-load = true

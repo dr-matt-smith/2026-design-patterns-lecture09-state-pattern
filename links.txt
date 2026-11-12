@@ -1,0 +1,24 @@
+
+
+github statecharts
+https://statecharts.github.io/how-to-use-statecharts.html
+
+https://statecharts.github.io/
+
+
+SCION and executable statecharts
+http://scion.scxml.io/
+
+Nancy Drew RPG 
+https://gist.github.com/thure/dcffc30117b9a9800084
+
+
+Ray Wenderlich - state patterh
+https://www.raywenderlich.com/6034380-state-pattern-using-unity
+
+Matt state pattern
+https://github.com/dr-matt-smith/unity-cookbook-2018-ch14-02-state-pattern
+
+«get/set»
+
+miligrammes

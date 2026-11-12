@@ -1,0 +1,129 @@
+<svg version="1.1" baseProfile="full" width="1207.4" height="446.2" viewBox="0 0 1207.388888888889 446.18110236220474" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<desc >#background: #ffffff
+	#direction: right
+	#spacing: 110
+	#padding: 14
+	#edgeMargin: 10
+	#gutter: 10
+	#arrowSize: 0.7
+	#.state: visual=roundrect fill=#fdf6e3 bold
+	#.decision: visual=rhomb fill=#f3efb0
+	[&lt;start&gt;start]
+	[&lt;decision&gt;​]
+	[&lt;state&gt;No Quarter]
+	[&lt;state&gt;Has Quarter]
+	[&lt;state&gt;Gumball Sold]
+	[&lt;state&gt;Out of Gumballs]
+	[start] -&gt; [​]
+	[No Quarter] \[gumballs \&gt; 0\] &lt;- [​]
+	[​] \[gumballs == 0\] -&gt; [Out of Gumballs]
+	[No Quarter] inserts quarter -&gt; [Has Quarter]
+	[Has Quarter] ejects quarter -&gt; [No Quarter]
+	[Has Quarter] turns crank -&gt; [Gumball Sold]
+	[Gumball Sold] dispense -&gt; [​]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="#ffffff">
+				<rect x="0.0" y="0.0" height="446.2" width="1207.4" stroke="none"></rect>
+			</g>
+			<g transform="translate(40.388888888888886, 14)" fill="#33322E">
+				<g transform="translate(10, 10)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M600.5 25.0 L707 25 L766.2461329898465 106.61457095540084 L766.2 106.6 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M750.4 102.3 L766.2 106.6 L767.0 90.2 L773.8 117.0 Z"></path>
+					</g>
+					<text x="-26.4" y="240.0" stroke="none">[gumballs &gt; 0]</text>
+					<path d="M107.6 244.8 L190 160 L317 160 L317 160 L444 160 L444 160 L575.5 160 L575.5 160 L707 160 L707 160 L762 160 L762.0 160.0 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M109.1 228.4 L107.6 244.8 L123.9 242.8 L98.6 254.0 Z"></path>
+					</g>
+					<text x="862.0" y="186.0" stroke="none">[gumballs == 0]</text>
+					<path d="M848.0 160.0 L903 160 L945.1666666666666 160 L945.2 160.0 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M932.3 170.3 L945.2 160.0 L932.3 149.7 L958.0 160.0 Z"></path>
+					</g>
+					<text x="149.0" y="272.0" stroke="none">inserts quarter</text>
+					<path d="M135.0 286.0 L190 286 L233.2235754433247 304.7188712549831 L233.2 304.7 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M217.4 309.0 L233.2 304.7 L225.5 290.2 L245.0 309.8 Z"></path>
+					</g>
+					<text x="259.0" y="398.2" stroke="none">ejects quarter</text>
+					<path d="M245.0 372.2 L190 396 L112.6849887676525 326.57427562809613 L112.7 326.6 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M129.1 327.5 L112.7 326.6 L115.4 342.8 L103.1 318.0 Z"></path>
+					</g>
+					<text x="403.0" y="367.0" stroke="none">turns crank</text>
+					<path d="M389.0 341.0 L444 341 L486.1666666666667 341 L486.2 341.0 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M473.3 351.3 L486.2 341.0 L473.3 330.7 L499.0 341.0 Z"></path>
+					</g>
+					<text x="666.0" y="367.0" stroke="none">dispense</text>
+					<path d="M652.0 341.0 L707 341 L775.6079403226389 214.28533471022814 L775.6 214.3 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M778.5 230.5 L775.6 214.3 L760.5 220.7 L781.7 203.0 Z"></path>
+					</g>
+					<g data-name="start">
+						<g fill="#33322E" stroke="#33322E" data-name="start">
+							<circle r="12.0" cx="575.5" cy="25.0" stroke="none" data-name="start"></circle>
+						</g>
+					</g>
+					<g data-name="​">
+						<g fill="#f3efb0" stroke="#33322E" data-name="​">
+							<path d="M805.0 127.0 L838.0 160.0 L805.0 193.0 L772.0 160.0 Z" data-name="​"></path>
+						</g>
+						<g transform="translate(783, 138)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="​" data-compartment="0">
+							<g transform="translate(14, 14)" fill="#33322E" text-align="center" data-name="​" data-compartment="0">
+								<text x="8.0" y="14.1" stroke="none" text-anchor="middle" data-name="​" data-compartment="0">​</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="No Quarter">
+						<g fill="#fdf6e3" stroke="#33322E" data-name="No Quarter">
+							<rect x="10.0" y="264.0" rx="22.0" ry="22.0" height="44.0" width="115.0" data-name="No Quarter"></rect>
+						</g>
+						<g transform="translate(10, 264)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="No Quarter" data-compartment="0">
+							<g transform="translate(14, 14)" fill="#33322E" text-align="center" data-name="No Quarter" data-compartment="0">
+								<text x="43.5" y="14.1" stroke="none" text-anchor="middle" data-name="No Quarter" data-compartment="0">No Quarter</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Has Quarter">
+						<g fill="#fdf6e3" stroke="#33322E" data-name="Has Quarter">
+							<rect x="255.0" y="319.0" rx="22.0" ry="22.0" height="44.0" width="124.0" data-name="Has Quarter"></rect>
+						</g>
+						<g transform="translate(255, 319)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Has Quarter" data-compartment="0">
+							<g transform="translate(14, 14)" fill="#33322E" text-align="center" data-name="Has Quarter" data-compartment="0">
+								<text x="48.0" y="14.1" stroke="none" text-anchor="middle" data-name="Has Quarter" data-compartment="0">Has Quarter</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Gumball Sold">
+						<g fill="#fdf6e3" stroke="#33322E" data-name="Gumball Sold">
+							<rect x="509.0" y="319.0" rx="22.0" ry="22.0" height="44.0" width="133.0" data-name="Gumball Sold"></rect>
+						</g>
+						<g transform="translate(509, 319)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Gumball Sold" data-compartment="0">
+							<g transform="translate(14, 14)" fill="#33322E" text-align="center" data-name="Gumball Sold" data-compartment="0">
+								<text x="52.5" y="14.1" stroke="none" text-anchor="middle" data-name="Gumball Sold" data-compartment="0">Gumball Sold</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Out of Gumballs">
+						<g fill="#fdf6e3" stroke="#33322E" data-name="Out of Gumballs">
+							<rect x="968.0" y="138.0" rx="22.0" ry="22.0" height="44.0" width="155.0" data-name="Out of Gumballs"></rect>
+						</g>
+						<g transform="translate(968, 138)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Out of Gumballs" data-compartment="0">
+							<g transform="translate(14, 14)" fill="#33322E" text-align="center" data-name="Out of Gumballs" data-compartment="0">
+								<text x="63.5" y="14.1" stroke="none" text-anchor="middle" data-name="Out of Gumballs" data-compartment="0">Out of Gumballs</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

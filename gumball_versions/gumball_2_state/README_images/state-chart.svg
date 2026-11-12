@@ -1,0 +1,135 @@
+<svg version="1.1" baseProfile="full" width="1232.0" height="348.0" viewBox="0 0 1231.9920634920634 348" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<desc >#background: #ffffff
+	#direction: right
+	#spacing: 110
+	#padding: 14
+	#edgeMargin: 10
+	#gutter: 10
+	#arrowSize: 0.7
+	#.state: visual=roundrect fill=#fdf6e3 bold
+	#.decision: visual=rhomb fill=#f3efb0
+	[&lt;start&gt;start]
+	[&lt;decision&gt;​]
+	[&lt;state&gt;No Quarter]
+	[&lt;state&gt;Has Quarter]
+	[&lt;state&gt;Sold]
+	[&lt;state&gt;Sold Out]
+	[start] -&gt; [​]
+	[No Quarter] \[gumballs \&gt; 0\] &lt;- [​]
+	[​] \[gumballs == 0\] -&gt; [Sold Out]
+	[No Quarter] inserts quarter -&gt; [Has Quarter]
+	[Has Quarter] ejects quarter -&gt; [No Quarter]
+	[Has Quarter] turns crank -&gt; [Sold]
+	[Sold] dispense -&gt; [​]
+	[Sold Out] refill -&gt; [No Quarter]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="#ffffff">
+				<rect x="0.0" y="0.0" height="348.0" width="1232.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(14, 14)" fill="#33322E">
+				<g transform="translate(10, 10)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M50.0 174.0 L105 174 L147.16666666666666 174 L147.2 174.0 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M134.3 184.3 L147.2 174.0 L134.3 163.7 L160.0 174.0 Z"></path>
+					</g>
+					<text x="608.3" y="161.0" stroke="none">[gumballs &gt; 0]</text>
+					<path d="M583.2 141.4 L527 174 L414 174 L414 174 L301 174 L301 174 L246 174 L246.0 174.0 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M577.2 156.8 L583.2 141.4 L566.9 139.0 L594.3 135.0 Z"></path>
+					</g>
+					<text x="97.7" y="117.0" stroke="none">[gumballs == 0]</text>
+					<path d="M232.7 131.0 L301 32 L343.1666666666667 32 L343.2 32.0 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M330.3 42.3 L343.2 32.0 L330.3 21.7 L356.0 32.0 Z"></path>
+					</g>
+					<text x="588.0" y="58.7" stroke="none">inserts quarter</text>
+					<path d="M717.0 72.7 L772 48 L815.2235754433248 66.71887125498314 L815.2 66.7 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M799.4 71.0 L815.2 66.7 L807.5 52.2 L827.0 71.8 Z"></path>
+					</g>
+					<text x="855.8" y="161.0" stroke="none">ejects quarter</text>
+					<path d="M841.8 135.0 L772 174 L715.814467543907 141.43532404585628 L715.8 141.4 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M732.1 139.0 L715.8 141.4 L721.8 156.8 L704.7 135.0 Z"></path>
+					</g>
+					<text x="985.0" y="89.0" stroke="none">turns crank</text>
+					<path d="M971.0 103.0 L1026 103 L1070.663067901528 135.86091006226408 L1070.7 135.9 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M1054.2 136.5 L1070.7 135.9 L1066.4 120.0 L1081.0 143.5 Z"></path>
+					</g>
+					<text x="1112.0" y="232.0" stroke="none">dispense</text>
+					<path d="M1098.0 206.0 L1026 300 L899 300 L899 300 L772 300 L772 300 L649.5 300 L649.5 300 L527 300 L527 300 L414 300 L414 300 L301 300 L301 300 L244.3233489845526 227.1300201229962 L244.3 227.1 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M260.3 231.0 L244.3 227.1 L244.1 243.6 L236.4 217.0 Z"></path>
+					</g>
+					<text x="486.0" y="18.0" stroke="none">refill</text>
+					<path d="M472.0 32.0 L527 32 L583.185532456093 64.56467595414374 L583.2 64.6 " fill="none"></path>
+					<g fill="#33322E">
+						<path d="M566.9 67.0 L583.2 64.6 L577.2 49.2 L594.3 71.0 Z"></path>
+					</g>
+					<g data-name="start">
+						<g fill="#33322E" stroke="#33322E" data-name="start">
+							<circle r="12.0" cx="25.0" cy="174.0" stroke="none" data-name="start"></circle>
+						</g>
+					</g>
+					<g data-name="​">
+						<g fill="#f3efb0" stroke="#33322E" data-name="​">
+							<path d="M203.0 141.0 L236.0 174.0 L203.0 207.0 L170.0 174.0 Z" data-name="​"></path>
+						</g>
+						<g transform="translate(181, 152)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="​" data-compartment="0">
+							<g transform="translate(14, 14)" fill="#33322E" text-align="center" data-name="​" data-compartment="0">
+								<text x="8.0" y="14.1" stroke="none" text-anchor="middle" data-name="​" data-compartment="0">​</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="No Quarter">
+						<g fill="#fdf6e3" stroke="#33322E" data-name="No Quarter">
+							<rect x="592.0" y="81.0" rx="22.0" ry="22.0" height="44.0" width="115.0" data-name="No Quarter"></rect>
+						</g>
+						<g transform="translate(592, 81)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="No Quarter" data-compartment="0">
+							<g transform="translate(14, 14)" fill="#33322E" text-align="center" data-name="No Quarter" data-compartment="0">
+								<text x="43.5" y="14.1" stroke="none" text-anchor="middle" data-name="No Quarter" data-compartment="0">No Quarter</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Has Quarter">
+						<g fill="#fdf6e3" stroke="#33322E" data-name="Has Quarter">
+							<rect x="837.0" y="81.0" rx="22.0" ry="22.0" height="44.0" width="124.0" data-name="Has Quarter"></rect>
+						</g>
+						<g transform="translate(837, 81)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Has Quarter" data-compartment="0">
+							<g transform="translate(14, 14)" fill="#33322E" text-align="center" data-name="Has Quarter" data-compartment="0">
+								<text x="48.0" y="14.1" stroke="none" text-anchor="middle" data-name="Has Quarter" data-compartment="0">Has Quarter</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Sold">
+						<g fill="#fdf6e3" stroke="#33322E" data-name="Sold">
+							<rect x="1091.0" y="152.0" rx="22.0" ry="22.0" height="44.0" width="63.0" data-name="Sold"></rect>
+						</g>
+						<g transform="translate(1091, 152)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Sold" data-compartment="0">
+							<g transform="translate(14, 14)" fill="#33322E" text-align="center" data-name="Sold" data-compartment="0">
+								<text x="17.5" y="14.1" stroke="none" text-anchor="middle" data-name="Sold" data-compartment="0">Sold</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Sold Out">
+						<g fill="#fdf6e3" stroke="#33322E" data-name="Sold Out">
+							<rect x="366.0" y="10.0" rx="22.0" ry="22.0" height="44.0" width="96.0" data-name="Sold Out"></rect>
+						</g>
+						<g transform="translate(366, 10)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Sold Out" data-compartment="0">
+							<g transform="translate(14, 14)" fill="#33322E" text-align="center" data-name="Sold Out" data-compartment="0">
+								<text x="34.0" y="14.1" stroke="none" text-anchor="middle" data-name="Sold Out" data-compartment="0">Sold Out</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

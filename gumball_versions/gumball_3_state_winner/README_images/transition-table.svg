@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="972" height="282" viewBox="0 0 972 282" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<rect width="972" height="282" fill="#ffffff"/>
+<rect x="1.0" y="1" width="167.9" height="34" fill="#e8f1fb" stroke="#999999"/>
+<text x="13.0" y="23.0" font-weight="bold" fill="#222222">State ↓ / Action →</text>
+<rect x="168.9" y="1" width="135.9" height="34" fill="#e8f1fb" stroke="#999999"/>
+<text x="180.9" y="23.0" font-weight="bold" fill="#222222">insert quarter</text>
+<rect x="304.7" y="1" width="142.4" height="34" fill="#e8f1fb" stroke="#999999"/>
+<text x="316.7" y="23.0" font-weight="bold" fill="#222222">eject quarter</text>
+<rect x="447.1" y="1" width="172.0" height="34" fill="#e8f1fb" stroke="#999999"/>
+<text x="459.1" y="23.0" font-weight="bold" fill="#222222">turn crank</text>
+<rect x="619.1" y="1" width="238.6" height="34" fill="#e8f1fb" stroke="#999999"/>
+<text x="631.1" y="23.0" font-weight="bold" fill="#222222">dispense</text>
+<rect x="857.7" y="1" width="112.8" height="34" fill="#e8f1fb" stroke="#999999"/>
+<text x="869.7" y="23.0" font-weight="bold" fill="#222222">refill</text>
+<rect x="1.0" y="35" width="167.9" height="34" fill="#f6f6f6" stroke="#999999"/>
+<text x="13.0" y="57.0" font-weight="bold" fill="#222222">No Quarter</text>
+<rect x="168.9" y="35" width="135.9" height="34" fill="#d8f5d0" stroke="#999999"/>
+<text x="180.9" y="57.0" fill="#222222">→ Has Quarter</text>
+<rect x="304.7" y="35" width="142.4" height="34" fill="#ffffff" stroke="#999999"/>
+<text x="316.7" y="57.0" fill="#222222">✗ no quarter</text>
+<rect x="447.1" y="35" width="172.0" height="34" fill="#ffffff" stroke="#999999"/>
+<text x="459.1" y="57.0" fill="#222222">✗ no quarter</text>
+<rect x="619.1" y="35" width="238.6" height="34" fill="#ffffff" stroke="#999999"/>
+<text x="631.1" y="57.0" fill="#222222">✗ pay first</text>
+<rect x="857.7" y="35" width="112.8" height="34" fill="#ffffff" stroke="#999999"/>
+<text x="869.7" y="57.0" fill="#222222">–</text>
+<rect x="1.0" y="69" width="167.9" height="53" fill="#f6f6f6" stroke="#999999"/>
+<text x="13.0" y="100.5" font-weight="bold" fill="#222222">Has Quarter</text>
+<rect x="168.9" y="69" width="135.9" height="53" fill="#ffffff" stroke="#999999"/>
+<text x="180.9" y="100.5" fill="#222222">✗ already one</text>
+<rect x="304.7" y="69" width="142.4" height="53" fill="#d8f5d0" stroke="#999999"/>
+<text x="316.7" y="100.5" fill="#222222">→ No Quarter</text>
+<rect x="447.1" y="69" width="172.0" height="53" fill="#d8f5d0" stroke="#999999"/>
+<text x="459.1" y="91.0" fill="#222222">◇ [1 in 10] → Winner</text>
+<text x="459.1" y="110.0" fill="#222222">◇ [else] → Sold</text>
+<rect x="619.1" y="69" width="238.6" height="53" fill="#ffffff" stroke="#999999"/>
+<text x="631.1" y="100.5" fill="#222222">✗</text>
+<rect x="857.7" y="69" width="112.8" height="53" fill="#ffffff" stroke="#999999"/>
+<text x="869.7" y="100.5" fill="#222222">–</text>
+<rect x="1.0" y="122" width="167.9" height="53" fill="#f6f6f6" stroke="#999999"/>
+<text x="13.0" y="153.5" font-weight="bold" fill="#222222">Sold</text>
+<rect x="168.9" y="122" width="135.9" height="53" fill="#ffffff" stroke="#999999"/>
+<text x="180.9" y="153.5" fill="#222222">✗ wait</text>
+<rect x="304.7" y="122" width="142.4" height="53" fill="#ffffff" stroke="#999999"/>
+<text x="316.7" y="153.5" fill="#222222">✗ already turned</text>
+<rect x="447.1" y="122" width="172.0" height="53" fill="#ffffff" stroke="#999999"/>
+<text x="459.1" y="153.5" fill="#222222">✗ turning twice</text>
+<rect x="619.1" y="122" width="238.6" height="53" fill="#d8f5d0" stroke="#999999"/>
+<text x="631.1" y="144.0" fill="#222222">◇ [gumballs &gt; 0] → No Quarter</text>
+<text x="631.1" y="163.0" fill="#222222">◇ [gumballs == 0] → Sold Out</text>
+<rect x="857.7" y="122" width="112.8" height="53" fill="#ffffff" stroke="#999999"/>
+<text x="869.7" y="153.5" fill="#222222">–</text>
+<rect x="1.0" y="175" width="167.9" height="72" fill="#f6f6f6" stroke="#999999"/>
+<text x="13.0" y="216.0" font-weight="bold" fill="#222222">Winner</text>
+<rect x="168.9" y="175" width="135.9" height="72" fill="#ffffff" stroke="#999999"/>
+<text x="180.9" y="216.0" fill="#222222">✗ wait</text>
+<rect x="304.7" y="175" width="142.4" height="72" fill="#ffffff" stroke="#999999"/>
+<text x="316.7" y="216.0" fill="#222222">✗ wait</text>
+<rect x="447.1" y="175" width="172.0" height="72" fill="#ffffff" stroke="#999999"/>
+<text x="459.1" y="216.0" fill="#222222">✗ turning again</text>
+<rect x="619.1" y="175" width="238.6" height="72" fill="#d8f5d0" stroke="#999999"/>
+<text x="631.1" y="197.0" fill="#222222">(2 gumballs)</text>
+<text x="631.1" y="216.0" fill="#222222">◇ [gumballs &gt; 0] → No Quarter</text>
+<text x="631.1" y="235.0" fill="#222222">◇ [gumballs == 0] → Sold Out</text>
+<rect x="857.7" y="175" width="112.8" height="72" fill="#ffffff" stroke="#999999"/>
+<text x="869.7" y="216.0" fill="#222222">–</text>
+<rect x="1.0" y="247" width="167.9" height="34" fill="#f6f6f6" stroke="#999999"/>
+<text x="13.0" y="269.0" font-weight="bold" fill="#222222">Sold Out</text>
+<rect x="168.9" y="247" width="135.9" height="34" fill="#ffffff" stroke="#999999"/>
+<text x="180.9" y="269.0" fill="#222222">✗ sold out</text>
+<rect x="304.7" y="247" width="142.4" height="34" fill="#ffffff" stroke="#999999"/>
+<text x="316.7" y="269.0" fill="#222222">✗ no quarter</text>
+<rect x="447.1" y="247" width="172.0" height="34" fill="#ffffff" stroke="#999999"/>
+<text x="459.1" y="269.0" fill="#222222">✗ no gumballs</text>
+<rect x="619.1" y="247" width="238.6" height="34" fill="#ffffff" stroke="#999999"/>
+<text x="631.1" y="269.0" fill="#222222">✗</text>
+<rect x="857.7" y="247" width="112.8" height="34" fill="#d8f5d0" stroke="#999999"/>
+<text x="869.7" y="269.0" fill="#222222">→ No Quarter</text>
+</svg>
