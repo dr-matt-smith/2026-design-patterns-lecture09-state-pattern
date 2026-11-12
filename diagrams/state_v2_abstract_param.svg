@@ -12,11 +12,12 @@
     <polyline points="20,82 220,82" fill="none" stroke="#222" stroke-width="1.3"/>
     <text x="28" y="99" font-size="12" text-anchor="start" font-weight="normal" font-style="normal" fill="#222">+ request()</text>
     <text x="28" y="115" font-size="12" text-anchor="start" font-weight="normal" font-style="normal" fill="#222">+ setState(s: State)</text>
-    <rect x="453" y="23" width="230" height="80" fill="#d6d6d6"/>
-    <rect x="450" y="20" width="230" height="80" fill="#fff" stroke="#222" stroke-width="1.3"/>
-    <text x="565.0" y="38" font-size="14" text-anchor="middle" font-weight="bold" font-style="italic" fill="#222">State</text>
-    <polyline points="450,46 680,46" fill="none" stroke="#222" stroke-width="1.3"/>
-    <text x="458" y="63" font-size="12" text-anchor="start" font-weight="normal" font-style="italic" fill="#222">+ handle(context: Context)</text>
+    <rect x="453" y="23" width="230" height="94" fill="#d6d6d6"/>
+    <rect x="450" y="20" width="230" height="94" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="565.0" y="36" font-size="11" text-anchor="middle" font-weight="normal" font-style="normal" fill="#222">«abstract»</text>
+    <text x="565.0" y="53" font-size="14" text-anchor="middle" font-weight="bold" font-style="italic" fill="#222">State</text>
+    <polyline points="450,60 680,60" fill="none" stroke="#222" stroke-width="1.3"/>
+    <text x="458" y="77" font-size="12" text-anchor="start" font-weight="normal" font-style="italic" fill="#222">+ handle(context: Context)</text>
     <rect x="293" y="208" width="200" height="52" fill="#d6d6d6"/>
     <rect x="290" y="205" width="200" height="52" fill="#fff" stroke="#222" stroke-width="1.3"/>
     <text x="390.0" y="223" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#222">ConcreteStateA</text>
@@ -30,13 +31,13 @@
     <polyline points="220,52 450,52" fill="none" stroke="#222" stroke-width="1.3"/>
     <polyline points="440.8691105968769,47.9223954694043 450,52 440.8691105968769,56.0776045305957" fill="none" stroke="#222" stroke-width="1.3"/>
     <text x="442" y="46" font-size="11" text-anchor="end" font-weight="normal" font-style="italic" fill="#444">state</text>
-    <polyline points="390.0,205 486.25,111" fill="none" stroke="#222" stroke-width="1.3"/>
-    <polygon points="486.2,100.0 473.9,104.2 483.1,112.6" fill="#fff" stroke="#222" stroke-width="1.3"/>
-    <polyline points="605.0,205 583.0,111" fill="none" stroke="#222" stroke-width="1.3"/>
-    <polygon points="583.0,100.0 579.2,112.4 591.4,109.9" fill="#fff" stroke="#222" stroke-width="1.3"/>
-    <polyline points="450,86 220,86" fill="none" stroke="#222" stroke-width="1.3" stroke-dasharray="6,4"/>
-    <polyline points="229.1308894031231,90.07760453059569 220,86 229.1308894031231,81.9223954694043" fill="none" stroke="#222" stroke-width="1.3"/>
-    <text x="228" y="80" font-size="11" text-anchor="start" font-weight="normal" font-style="italic" fill="#444">«use»</text>
+    <polyline points="390.0,205 486.25,125" fill="none" stroke="#222" stroke-width="1.3"/>
+    <polygon points="486.2,114.0 473.9,118.2 483.1,126.6" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <polyline points="605.0,205 583.0,125" fill="none" stroke="#222" stroke-width="1.3"/>
+    <polygon points="583.0,114.0 579.2,126.4 591.4,123.9" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <polyline points="450,96 220,96" fill="none" stroke="#222" stroke-width="1.3" stroke-dasharray="6,4"/>
+    <polyline points="229.1308894031231,100.07760453059569 220,96 229.1308894031231,91.9223954694043" fill="none" stroke="#222" stroke-width="1.3"/>
+    <text x="228" y="90" font-size="11" text-anchor="start" font-weight="normal" font-style="italic" fill="#444">«use»</text>
     <rect x="33" y="238" width="135" height="30" fill="#d6d6d6"/>
     <path d="M30,235 H156 L165,244 V265 H30 Z" fill="#fff" stroke="#222" stroke-width="1.3"/>
     <path d="M156,235 V244 H165" fill="none" stroke="#222" stroke-width="1"/>
