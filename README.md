@@ -2,6 +2,10 @@
 
 **COMP Design Patterns · Week 9 (State)**
 
+NOTE: 
+- there are PDFs and interactive story slide documents in folder:
+  - `\story- lecture slides`
+
 The **State Pattern** lets an object change its behaviour when its internal state changes, so that the object appears to
 change its class. Instead of one large class full of `if`/`switch` statements on a state variable, each state is
 written as its own class. 
