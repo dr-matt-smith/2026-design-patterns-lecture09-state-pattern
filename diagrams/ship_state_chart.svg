@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1000 640"
+   width="1000"
+   height="640"
+   font-family="Helvetica, Arial, sans-serif"
+   version="1.1"
+   id="svg15"
+   sodipodi:docname="ship_state_chart.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.88"
+     inkscape:cx="500"
+     inkscape:cy="320.45455"
+     inkscape:window-width="2560"
+     inkscape:window-height="1381"
+     inkscape:window-x="0"
+     inkscape:window-y="31"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg15" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="9"
+       markerHeight="9"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#222"
+         id="path1" />
+    </marker>
+  </defs>
+  <rect
+     width="1000"
+     height="640"
+     fill="#ffffff"
+     id="rect1" />
+  <!-- Title -->
+  <!-- Initial pseudo-state -->
+  <circle
+     cx="380.11359"
+     cy="91.249992"
+     r="28.613636"
+     fill="#222222"
+     id="circle2"
+     style="stroke-width:2.60124" />
+  <text
+     x="434.72726"
+     y="156.59091"
+     font-size="14px"
+     fill="#222222"
+     id="text3">create(initialX) / x = initialX</text>
+  <!-- STATIONARY -->
+  <rect
+     x="410"
+     y="260"
+     width="180"
+     height="80"
+     rx="16"
+     fill="#e8f1fb"
+     stroke="#2b5d8f"
+     stroke-width="2"
+     id="rect3" />
+  <text
+     x="500"
+     y="306"
+     font-size="16"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#1b3d5f"
+     id="text4">STATIONARY</text>
+  <!-- MOVE_LEFT -->
+  <rect
+     x="30"
+     y="260"
+     width="180"
+     height="80"
+     rx="16"
+     fill="#eef8ec"
+     stroke="#3c7d34"
+     stroke-width="2"
+     id="rect4" />
+  <text
+     x="120"
+     y="290"
+     font-size="16"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#25521f"
+     id="text5">MOVE_LEFT</text>
+  <line
+     x1="30"
+     y1="302"
+     x2="210"
+     y2="302"
+     stroke="#3c7d34"
+     stroke-width="1"
+     id="line5" />
+  <text
+     x="120"
+     y="325"
+     font-size="14"
+     text-anchor="middle"
+     fill="#222"
+     id="text6">entry / x--</text>
+  <!-- MOVE_RIGHT -->
+  <rect
+     x="790"
+     y="260"
+     width="180"
+     height="80"
+     rx="16"
+     fill="#eef8ec"
+     stroke="#3c7d34"
+     stroke-width="2"
+     id="rect6" />
+  <text
+     x="880"
+     y="290"
+     font-size="16"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#25521f"
+     id="text7">MOVE_RIGHT</text>
+  <line
+     x1="790"
+     y1="302"
+     x2="970"
+     y2="302"
+     stroke="#3c7d34"
+     stroke-width="1"
+     id="line7" />
+  <text
+     x="880"
+     y="325"
+     font-size="14"
+     text-anchor="middle"
+     fill="#222"
+     id="text8">entry / x++</text>
+  <!-- FIRE_MISSILE -->
+  <rect
+     x="410"
+     y="480"
+     width="180"
+     height="80"
+     rx="16"
+     fill="#fdeeee"
+     stroke="#a33a3a"
+     stroke-width="2"
+     id="rect8" />
+  <text
+     x="500"
+     y="510"
+     font-size="16"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#6e2020"
+     id="text9">FIRE_MISSILE</text>
+  <line
+     x1="410"
+     y1="522"
+     x2="590"
+     y2="522"
+     stroke="#a33a3a"
+     stroke-width="1"
+     id="line9" />
+  <text
+     x="500"
+     y="545"
+     font-size="14"
+     text-anchor="middle"
+     fill="#222"
+     id="text10">entry / fireMissile()</text>
+  <!-- STATIONARY -> MOVE_LEFT -->
+  <line
+     x1="410"
+     y1="284"
+     x2="212"
+     y2="284"
+     stroke="#222"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line10" />
+  <text
+     x="310"
+     y="275"
+     font-size="14"
+     text-anchor="middle"
+     fill="#222"
+     id="text11">leftArrowKeyPressed()</text>
+  <!-- MOVE_LEFT -> STATIONARY (completion) -->
+  <line
+     x1="210"
+     y1="316"
+     x2="408"
+     y2="316"
+     stroke="#222"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line11" />
+  <!-- STATIONARY -> MOVE_RIGHT -->
+  <line
+     x1="590"
+     y1="284"
+     x2="788"
+     y2="284"
+     stroke="#222"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line12" />
+  <text
+     x="690"
+     y="275"
+     font-size="14"
+     text-anchor="middle"
+     fill="#222"
+     id="text12">rightArrowKeyPressed()</text>
+  <!-- MOVE_RIGHT -> STATIONARY (completion) -->
+  <line
+     x1="790"
+     y1="316"
+     x2="592"
+     y2="316"
+     stroke="#222"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line13" />
+  <!-- STATIONARY -> FIRE_MISSILE -->
+  <line
+     x1="480"
+     y1="340"
+     x2="480"
+     y2="478"
+     stroke="#222"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line14" />
+  <text
+     x="470"
+     y="414"
+     font-size="14"
+     text-anchor="end"
+     fill="#222"
+     id="text14">spaceKeyPressed()</text>
+  <!-- FIRE_MISSILE -> STATIONARY (completion) -->
+  <line
+     x1="520"
+     y1="480"
+     x2="520"
+     y2="342"
+     stroke="#222"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line15" />
+  <!-- Legend -->
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="M 399.12714,112.43647 487.50001,250"
+     id="path15"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
+</svg>

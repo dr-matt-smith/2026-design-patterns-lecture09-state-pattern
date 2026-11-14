@@ -14,10 +14,10 @@ changes.
 | Marp Core                   | `https://esm.sh/@marp-team/marp-core` (unpinned, resolved to 4.4.0) | `https://esm.sh/@marp-team/marp-core@5.0.2` (pinned RC)         |
 | Syntax highlighting         | highlight.js, built into core                                       | Shiki plugin (`/plugins/shiki`)                                 |
 | Maths                       | KaTeX/MathJax, built into core                                      | KaTeX plugin (`/plugins/katex`)                                 |
-| Mermaid diagrams            | not available                                                       | Mermaid plugin (`/plugins/mermaid`)                             |
+| Mermaid diagrams            | not available                                                       | Pele, via `js/pele-plugin.js` (see section 9)                   |
 | `<!-- fit -->` auto-scaling | not working (helper couldn't be loaded as a module)                 | working in play and preview, via `/browser`                     |
 | WebKit SVG polyfill         | separate `@marp-team/marpit-svg-polyfill` import                    | included in the browser helper                                  |
-| Mermaid diagram size        | natural size (often a small corner of the slide)                    | full slide width by default                                     |
+| Mermaid diagram size        | natural size (often a small corner of the slide)                    | up to 2× natural size, shrunk to fit the slide (section 9)      |
 | nomnoml UML diagrams        | not available                                                       | the editor's own plugin, `js/nomnoml-plugin.js` (see section 6) |
 
 Everything is still loaded from esm.sh on first play or first PDF export. Nothing is vendored yet.
@@ -96,6 +96,9 @@ In an exported PDF, `<!-- fit -->` text and auto-scaled code blocks appear at th
 upgrade. This is recorded as a known limit in `docs/spec.md`.
 
 ### 5. Mermaid diagrams fill the slide width by default
+
+> Replaced in November 2026: Mermaid is now drawn by Pele, and sized as described in section 9. The rule below is
+> no longer in `js/story.js`.
 
 Mermaid SVGs come out at their natural pixel size. They have a `viewBox`, so they scale cleanly. A default rule is added
 to every slide's stylesheet:
@@ -248,3 +251,67 @@ See `TDDs/version02_implementation_plan.md` for the full plan and measurements. 
   in the text. Curly quotes and dashes become plain ASCII.
 - **No selectable text in diagrams or maths.** Mermaid, nomnoml and KaTeX are skipped by the text layer.
 - **PDF quality:** Standard renders at 1× (about half v1's size), High at 2×.
+
+## 9. Mermaid diagrams drawn with Pele (November 2026)
+
+`` ```mermaid `` blocks are now drawn by [Pele](https://github.com/obsidianmd/pele) 1.13.0, not by Marp's own Mermaid
+plugin (beautiful-mermaid). See `README_beautiful_mermaid.md` for why beautiful-mermaid was dropped: it silently left
+out anything it didn't understand, such as namespaces.
+
+- **How it's loaded.** `js/pele-plugin.js` is a markdown-it plugin, built like `js/nomnoml-plugin.js`, and sits in
+  `MARP_PLUGIN_URLS` in place of `/plugins/mermaid`. Pele is vendored in `js/vendor/pele-1.13.0.js` (MIT licence in
+  `js/vendor/LICENSE-pele`). It has no dependencies, so diagrams draw with no network connection. That also removes
+  the elkjs (EPL-2.0) licence question noted in the checklist above.
+- **Full Mermaid language.** Pele supports every diagram type built into Mermaid 12.1.0. A diagram with a syntax
+  error is shown as a code block, so you can see what to fix.
+- **What you see is what the PDF gets.** Each diagram is put on the slide as an `<img>` of Pele's SVG. Play, the
+  node preview and the PDF export all draw that same image. (An inline `<svg>` was tried first, but html2canvas
+  shifted and cropped any diagram narrower than the slide.)
+- **Size.** A diagram is shown at up to 2× its natural size, so its text is about the size of the slide text. A
+  larger diagram is shrunk to fit 1120 × 563 px, the room on a 1280 × 720 slide. The shrinking is done in the
+  plugin, not by CSS, because Celbridge's PDF export draws an image at the size it was made and cut off one that CSS
+  had shrunk.
+- **Look.** Diagrams use Pele's own colours and a Helvetica/Arial font, not the slide theme's, so they look the same
+  everywhere. Diagram text is part of the image, so it isn't in the PDF's selectable text.
+- **Removed:** the `showDiagramDiamonds()` workaround and the `svg[data-marp-mermaid]` width rule (section 5), both of
+  which were only there for beautiful-mermaid.
+
+### State diagram labels above the arrow
+
+In a state diagram, Pele puts each event name in the middle of its arrow, on a small white box, so the arrow has a
+gap. The plugin changes this: on a **horizontal** transition, the event name is moved to just above the line and the
+box is dropped, so the arrow is unbroken, as in a usual UML state chart. Labels on vertical or slanted arrows stay
+where Pele put them, since a raised label there would sit on the line. If a raised label in the top row would stick
+out of the picture, the diagram is made a little taller.
+
+In a crowded diagram, a raised label can run into a state or another label. To go back to Pele's own placement
+(label on the line), use either of these special comments:
+
+- **For a slide:** put this comment anywhere on the slide before the diagram. It covers every diagram after it on
+  that slide.
+
+  ```markdown
+  <!-- pele: labels-on-line -->
+  ```
+
+- **For one diagram:** put this line inside the `` ```mermaid `` block. It's an ordinary Mermaid comment, so GitHub and
+  mermaid.live ignore it.
+
+  ```text
+  %% pele: labels-on-line
+  ```
+
+For example:
+
+````markdown
+<!-- pele: labels-on-line -->
+
+```mermaid
+stateDiagram-v2
+  direction LR
+  [*] --> ON : event
+  ON --> [*] : event
+```
+````
+
+Only state diagrams are changed. Other diagram types are drawn exactly as Pele draws them.

@@ -1,5 +1,37 @@
 # Story Builder — Mermaid.js vs beautiful-mermaid
 
+> **Update, 13 November 2026: this copy of the editor now draws `` ```mermaid `` blocks with
+> [Pele](https://github.com/obsidianmd/pele), not beautiful-mermaid.**
+>
+> - `js/pele-plugin.js` is a markdown-it plugin, like `js/nomnoml-plugin.js`. Marp's own Mermaid plugin is no longer
+>   loaded (see `MARP_PLUGIN_URLS` in `js/story.js`), and the `showDiagramDiamonds()` workaround below was removed.
+> - Pele 1.13.0 is vendored in `js/vendor/pele-1.13.0.js` (MIT, `js/vendor/LICENSE-pele`, no dependencies), so drawing a
+>   diagram needs no network. It supports every diagram type built into Mermaid 12.1.0, and renders synchronously, so
+>   Marp's `render()` stays synchronous.
+> - **What you see is what the PDF gets.** Each diagram goes on the slide as an `<img>` holding Pele's SVG, sized at up
+>   to 2× its natural size (never wider than the slide). Play, the node preview and the PDF export all draw that same
+>   image. An inline `<svg>` was tried first: html2canvas shifted and cropped any diagram narrower than the slide.
+>   Pele's SVG is self-contained (colours as variables with fallbacks on the `<svg>` itself, labels as plain `<text>`),
+>   so it looks the same inside the image as it would inline.
+> - Diagrams use Pele's own colours and a Helvetica/Arial font, not the slide theme's colours, so they are identical in
+>   the PDF. Diagram text is part of the image, so it isn't in the PDF's selectable text layer.
+> - **State diagram labels sit above the arrow.** On a horizontal transition, the plugin moves the event name to just
+>   above the line and drops Pele's white label box, so the arrow is unbroken. Labels on vertical or slanted arrows
+>   stay where Pele put them. If a diagram looks crowded, switch back to Pele's own placement (label on the line) with
+>   this comment anywhere on the slide before the diagram (it covers every diagram after it on that slide):
+>
+>   ```markdown
+>   <!-- pele: labels-on-line -->
+>   ```
+>
+>   or with this line inside the `` ```mermaid `` block (a Mermaid comment, ignored by GitHub and mermaid.live):
+>
+>   ```text
+>   %% pele: labels-on-line
+>   ```
+>
+> The comparison below is kept for the record.
+
 Written 30 September 2026, after namespaces in a class diagram were found to be silently dropped. Read this before
 deciding how the story editor should render `` ```mermaid `` blocks.
 
@@ -145,4 +177,4 @@ they are scaled to 71–100% to fit the slide.
   documented in `docs/spec.md`.
 - Only build the middle path (option 4) if both matter.
 
-No decision has been made yet; the editor still uses beautiful-mermaid.
+Decision (13 November 2026): neither — this copy of the editor now uses Pele (see the update at the top).

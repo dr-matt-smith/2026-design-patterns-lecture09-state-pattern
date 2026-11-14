@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="pele pele-state" viewBox="0 0 120 40" width="120" height="40" style="--_fg:var(--pele-fg,#1f1f1f);--_l:var(--pele-line,#1f1f1f);color:var(--_fg);font:16px sans-serif;font-family:var(--pele-font,'Helvetica Neue', Helvetica, Arial, sans-serif)" fill="var(--_fg)" role="graphics-document document" aria-roledescription="transition">
+  <g class="pele-edges" fill="none" stroke="var(--_l)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line class="pele-edge" x1="2" y1="28" x2="116" y2="28"/>
+    <path class="pele-arrowhead" d="M104,20 L117,28 L104,36"/>
+  </g>
+  <text class="pele-label" x="58" y="18" text-anchor="middle">event</text>
+</svg>

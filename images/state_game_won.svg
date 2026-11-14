@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="pele pele-state" viewBox="0 0 144 76" width="144" height="76" style="--_bg:var(--pele-bg,#fff);--_fg:var(--pele-fg,#1f1f1f);--_m:var(--pele-muted,#6e6e6e);--_l:var(--pele-line,#1f1f1f);--_s:var(--pele-surface,#f3f3f3);--_a:var(--pele-surface-alt,#e6e6e6);--_b:var(--pele-border,#8a8a8a);--_c:var(--pele-accent,#5b7bd5);color:var(--_fg);font:16px sans-serif;font-family:var(--pele-font,'Helvetica Neue', Helvetica, Arial, sans-serif)" fill="var(--_fg)" role="graphics-document document" aria-roledescription="state">
+  <g class="pele-nodes">
+    <g class="pele-node pele-state" data-id="GameWon" transform="translate(72,38)">
+      <rect x="-70" y="-36" width="140" height="72" rx="10" fill="var(--_s)" stroke="var(--_b)"/>
+      <text class="pele-label" x="0" y="-12" text-anchor="middle">Game Won</text>
+      <line class="pele-divider" x1="-70" y1="2" x2="70" y2="2" stroke="var(--_b)"/>
+      <text class="pele-activity" x="-60" y="25" font-size="15">entry / score++</text>
+    </g>
+  </g>
+</svg>

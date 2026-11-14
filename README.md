@@ -196,9 +196,7 @@ gumball!").
 - **The State classes control the transitions.** They choose the next state through the Context's getters
   (`getHasQuarterState()` and so on), so no state class needs to import or construct another. `SoldState.dispense()`
   shows a transition with a **guard**: it goes to `NoQuarter` or `SoldOut` depending on `getCount()`.
-- **`dispense()` is an internal action.** The customer can only turn the crank, so `GumballMachine.turnCrank()` calls
-  `state.turnCrank()` and then `state.dispense()`. If the crank was turned with no quarter, the current state is still
-  `NoQuarter` when `dispense()` runs, so the customer also sees "You need to pay first".
+
 - **`refill()` was added after the first design.** It is the extra action that *Head First* adds later in the
   chapter. Adding it meant one new method in the interface and in every concrete state, but only `SoldOutState` does
   anything with it. With an abstract superclass ([Variant 1](#variant-1--abstract-superclass-context-cached-in-the-constructor)),

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 515" width="770" height="515" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>Variant 1 — abstract superclass, GumballMachine cached in the constructor</title>
+  <rect width="770" height="515" fill="#fff"/>
+  <text x="20" y="30" font-size="20" font-weight="bold" fill="#222">Variant 1 — abstract superclass, GumballMachine cached in the constructor</text>
+  <line x1="20" y1="42" x2="750" y2="42" stroke="#c8d0d8" stroke-width="1"/>
+  <g transform="translate(0,52)">
+    <rect x="23" y="23" width="210" height="146" fill="#d6d6d6"/>
+    <rect x="20" y="20" width="210" height="146" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="125.0" y="40" font-size="14" text-anchor="middle" font-weight="bold" fill="#222">GumballMachine</text>
+    <line x1="20" y1="50" x2="230" y2="50" stroke="#222" stroke-width="1.3"/>
+    <text x="29" y="67" font-size="12" text-anchor="start" fill="#222">- state: State</text>
+    <text x="29" y="83" font-size="12" text-anchor="start" fill="#222">- count: number</text>
+    <line x1="20" y1="92" x2="230" y2="92" stroke="#222" stroke-width="1.3"/>
+    <text x="29" y="109" font-size="12" text-anchor="start" fill="#222">+ insertQuarter()</text>
+    <text x="29" y="125" font-size="12" text-anchor="start" fill="#222">+ ejectQuarter()</text>
+    <text x="29" y="141" font-size="12" text-anchor="start" fill="#222">+ turnCrank()</text>
+    <text x="29" y="157" font-size="12" text-anchor="start" fill="#222">+ setState(s: State)</text>
+    <rect x="445" y="23" width="220" height="158" fill="#d6d6d6"/>
+    <rect x="442" y="20" width="220" height="158" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="552.0" y="36" font-size="11" text-anchor="middle" fill="#222">«abstract»</text>
+    <text x="552.0" y="53" font-size="14" text-anchor="middle" font-weight="bold" font-style="italic" fill="#222">State</text>
+    <line x1="442" y1="62" x2="662" y2="62" stroke="#222" stroke-width="1.3"/>
+    <text x="451" y="79" font-size="12" text-anchor="start" fill="#222"># gumballMachine: GumballMachine</text>
+    <line x1="442" y1="88" x2="662" y2="88" stroke="#222" stroke-width="1.3"/>
+    <text x="451" y="105" font-size="12" text-anchor="start" fill="#222">+ constructor(gumballMachine)</text>
+    <text x="451" y="121" font-size="12" text-anchor="start" font-style="italic" fill="#222">+ insertQuarter()</text>
+    <text x="451" y="137" font-size="12" text-anchor="start" font-style="italic" fill="#222">+ ejectQuarter()</text>
+    <text x="451" y="153" font-size="12" text-anchor="start" font-style="italic" fill="#222">+ turnCrank()</text>
+    <text x="451" y="169" font-size="12" text-anchor="start" font-style="italic" fill="#222">+ dispense()</text>
+    <polyline points="230,46 442,46" fill="none" stroke="#222" stroke-width="1.3"/>
+    <polyline points="433.8,42.3 442.0,46.0 433.8,49.7" fill="none" stroke="#222" stroke-width="1.3"/>
+    <text x="434" y="40" font-size="11" text-anchor="end" font-style="italic" fill="#444">state</text>
+    <polyline points="442,92 230,92" fill="none" stroke="#222" stroke-width="1.3"/>
+    <polyline points="238.2,95.7 230.0,92.0 238.2,88.3" fill="none" stroke="#222" stroke-width="1.3"/>
+    <text x="238" y="86" font-size="11" text-anchor="start" font-style="italic" fill="#444">gumballMachine</text>
+    <rect x="63" y="193" width="187" height="88" fill="#d6d6d6"/>
+    <path d="M60,190 H237 L247,200 V278 H60 Z" fill="#fff6b3" stroke="#222" stroke-width="1.3"/>
+    <path d="M237,190 V200 H247" fill="none" stroke="#222" stroke-width="1"/>
+    <text x="153.5" y="209" font-size="12" text-anchor="middle" fill="#222">NOTE:</text>
+    <text x="153.5" y="225" font-size="12" text-anchor="middle" fill="#222">Delegate event to current</text>
+    <text x="153.5" y="241" font-size="12" text-anchor="middle" fill="#222">state, for example:</text>
+    <text x="72" y="266" font-size="12" text-anchor="start" fill="#222">this.state.insertQuarter()</text>
+    <polyline points="153.5,166 153.5,190" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="2,3"/>
+    <polyline points="552,192 552,315" fill="none" stroke="#222" stroke-width="1.3"/>
+    <polygon points="552.0,178 543.0,192 561.0,192" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <polyline points="95,315 587,315" fill="none" stroke="#222" stroke-width="1.3"/>
+    <polyline points="95,315 95,339" fill="none" stroke="#222" stroke-width="1.3"/>
+    <rect x="23" y="342" width="150" height="104" fill="#d6d6d6"/>
+    <rect x="20" y="339" width="150" height="104" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="95.0" y="359" font-size="14" text-anchor="middle" font-weight="bold" fill="#222">NoQuarterState</text>
+    <line x1="20" y1="369" x2="170" y2="369" stroke="#222" stroke-width="1.3"/>
+    <text x="29" y="386" font-size="12" text-anchor="start" fill="#222">+ insertQuarter()</text>
+    <text x="29" y="402" font-size="12" text-anchor="start" fill="#222">+ ejectQuarter()</text>
+    <text x="29" y="418" font-size="12" text-anchor="start" fill="#222">+ turnCrank()</text>
+    <text x="29" y="434" font-size="12" text-anchor="start" fill="#222">+ dispense()</text>
+    <polyline points="259,315 259,339" fill="none" stroke="#222" stroke-width="1.3"/>
+    <rect x="187" y="342" width="150" height="104" fill="#d6d6d6"/>
+    <rect x="184" y="339" width="150" height="104" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="259.0" y="359" font-size="14" text-anchor="middle" font-weight="bold" fill="#222">HasQuarterState</text>
+    <line x1="184" y1="369" x2="334" y2="369" stroke="#222" stroke-width="1.3"/>
+    <text x="193" y="386" font-size="12" text-anchor="start" fill="#222">+ insertQuarter()</text>
+    <text x="193" y="402" font-size="12" text-anchor="start" fill="#222">+ ejectQuarter()</text>
+    <text x="193" y="418" font-size="12" text-anchor="start" fill="#222">+ turnCrank()</text>
+    <text x="193" y="434" font-size="12" text-anchor="start" fill="#222">+ dispense()</text>
+    <polyline points="423,315 423,339" fill="none" stroke="#222" stroke-width="1.3"/>
+    <rect x="351" y="342" width="150" height="104" fill="#d6d6d6"/>
+    <rect x="348" y="339" width="150" height="104" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="423.0" y="359" font-size="14" text-anchor="middle" font-weight="bold" fill="#222">SoldState</text>
+    <line x1="348" y1="369" x2="498" y2="369" stroke="#222" stroke-width="1.3"/>
+    <text x="357" y="386" font-size="12" text-anchor="start" fill="#222">+ insertQuarter()</text>
+    <text x="357" y="402" font-size="12" text-anchor="start" fill="#222">+ ejectQuarter()</text>
+    <text x="357" y="418" font-size="12" text-anchor="start" fill="#222">+ turnCrank()</text>
+    <text x="357" y="434" font-size="12" text-anchor="start" fill="#222">+ dispense()</text>
+    <polyline points="587,315 587,339" fill="none" stroke="#222" stroke-width="1.3"/>
+    <rect x="515" y="342" width="150" height="104" fill="#d6d6d6"/>
+    <rect x="512" y="339" width="150" height="104" fill="#fff" stroke="#222" stroke-width="1.3"/>
+    <text x="587.0" y="359" font-size="14" text-anchor="middle" font-weight="bold" fill="#222">SoldOutState</text>
+    <line x1="512" y1="369" x2="662" y2="369" stroke="#222" stroke-width="1.3"/>
+    <text x="521" y="386" font-size="12" text-anchor="start" fill="#222">+ insertQuarter()</text>
+    <text x="521" y="402" font-size="12" text-anchor="start" fill="#222">+ ejectQuarter()</text>
+    <text x="521" y="418" font-size="12" text-anchor="start" fill="#222">+ turnCrank()</text>
+    <text x="521" y="434" font-size="12" text-anchor="start" fill="#222">+ dispense()</text>
+  </g>
+</svg>

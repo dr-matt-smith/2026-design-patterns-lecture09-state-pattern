@@ -47,34 +47,30 @@ const CENTRE_TWEEN_MS = 300;
 // A passage is a Marp slide, so play mode renders it with marp-core. Prototype arrangement: the bundle is
 // imported from a CDN on first play rather than vendored, so the editor still opens, edits and saves with
 // no network — only playing needs it. The version is pinned: v5 is a release candidate, and an unpinned URL
-// would move with npm's `latest` tag. Since v5 the core is lightweight, and syntax highlighting (Shiki), Mermaid
-// diagrams and KaTeX maths are plugins of their own, loaded beside it.
+// would move with npm's `latest` tag. Since v5 the core is lightweight, and syntax highlighting (Shiki) and KaTeX
+// maths are plugins of their own, loaded beside it. Marp's Mermaid plugin (beautiful-mermaid) is NOT loaded:
+// ```mermaid blocks are drawn by the editor's own Pele plugin instead (see js/pele-plugin.js).
 const MARP_URL = "https://esm.sh/@marp-team/marp-core@5.0.2";
-// The editor's own nomnoml plugin draws ```nomnoml blocks as UML diagrams. It comes last, so a diagram that fails
-// to parse falls back to Shiki's code block.
+// The editor's own plugins draw ```nomnoml blocks as UML diagrams and ```mermaid blocks with Pele. They come
+// after Shiki, so a diagram that fails to parse falls back to Shiki's code block.
 const MARP_PLUGIN_URLS = [
-  ...["shiki", "mermaid", "katex"].map((name) => `${MARP_URL}/plugins/${name}`),
+  ...["shiki", "katex"].map((name) => `${MARP_URL}/plugins/${name}`),
   new URL("./nomnoml-plugin.js", import.meta.url).href,
+  new URL("./pele-plugin.js", import.meta.url).href,
 ];
 // Marp's browser helper does auto-scaling (the `<!-- fit -->` directive, and code blocks shrunk to fit) and
 // carries the WebKit SVG polyfill. WebKit lays out a slide's contents at the SVG's scale but paints some of
 // them (images, positioned elements) unscaled, so without the polyfill a slide narrower than 1280px shows a
 // cropped corner.
 const MARP_BROWSER_URL = `${MARP_URL}/browser`;
-// A diagram is drawn at its natural size, which is often a small corner of the slide, so it is stretched across
-// the slide's width by default, keeping its proportions. The theme caps a Mermaid diagram's height; no theme knows
-// nomnoml, so its cap is set here, at the default theme's Mermaid value.
-// beautiful-mermaid draws each edge (event) label in a bordered rounded box, which reads like a state. The border
-// is removed so the label is plain italic text; the background fill stays, so the arrow line breaks behind the text.
-const SLIDE_DEFAULT_CSS = "svg[data-marp-mermaid] { width: 100%; }\n" +
-  "svg[data-marp-mermaid] g.edge-label rect { stroke: none; }\n" +
-  "svg[data-marp-mermaid] g.edge-label text { font-style: italic; }\n" +
-  "svg[data-nomnoml] { display: block; width: 100%; height: auto; max-height: 563px; }\n";
-// beautiful-mermaid (behind Marp's Mermaid plugin) anchors the aggregation and composition diamonds at the wrong
-// end (refX="0" with orient="auto-start-reverse"), so each diamond is drawn inside the owning class's box and the
-// box covers it. Anchoring them at their far point (refX="12", the marker's width) puts them just outside the box,
-// as the inheritance triangle already is. Remove once the renderer is fixed.
-const HIDDEN_DIAMOND_MARKER = /<marker\b[^>]*\bid="cls-(?:aggregation|composition)"[^>]*>/g;
+// A nomnoml diagram is drawn at its natural size, which is often a small corner of the slide, so it is stretched
+// across the slide's width by default, keeping its proportions. A Pele (Mermaid) diagram is given its width by
+// js/pele-plugin.js (up to twice its natural size, and already scaled down to fit a 1280 x 720 slide, which the PDF
+// export needs), and is centred. No theme knows either, so both are also capped here at the height the default
+// theme gives a Mermaid diagram; for Pele that is only a safety net, for a smaller slide size.
+const SLIDE_DEFAULT_CSS =
+  "svg[data-nomnoml] { display: block; width: 100%; height: auto; max-height: 563px; }\n" +
+  "img[data-pele] { display: block; margin: 0 auto; max-width: 100%; height: auto; max-height: 563px; object-fit: contain; }\n";
 // PDF export rasterises each slide and pages the images, with libraries fetched on first export the same way.
 // WebKit won't let a canvas that has drawn Marp's SVG slide be read back, so the slide is rendered as plain
 // HTML and html2canvas paints it.
@@ -1950,16 +1946,7 @@ function withSlideDefaults(renderer) {
     return options;
   };
 
-  const render = renderer.render;
-  renderer.render = function (...args) {
-    const result = render.apply(this, args);
-    return { ...result, html: showDiagramDiamonds(result.html) };
-  };
   return renderer;
-}
-
-function showDiagramDiamonds(html) {
-  return html.replace(HIDDEN_DIAMOND_MARKER, (tag) => tag.replace(/\brefX="0"/, 'refX="12"'));
 }
 
 // Starts Marp's browser helper on the page, which keeps each slide in play and in the preview painted at its

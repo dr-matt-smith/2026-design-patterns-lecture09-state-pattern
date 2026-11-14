@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="pele pele-state" viewBox="0 0 850 212" width="850" height="212" style="--_bg:var(--pele-bg,#fff);--_fg:var(--pele-fg,#1f1f1f);--_m:var(--pele-muted,#6e6e6e);--_l:var(--pele-line,#1f1f1f);--_s:var(--pele-surface,#f3f3f3);--_a:var(--pele-surface-alt,#e6e6e6);--_b:var(--pele-border,#8a8a8a);--_c:var(--pele-accent,#5b7bd5);color:var(--_fg);font:20px sans-serif;font-family:var(--pele-font,'Helvetica Neue', Helvetica, Arial, sans-serif)" fill="var(--_fg)" role="graphics-document document" aria-roledescription="state">
+  <defs>
+    <marker id="pele-open-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M1,1 L11,6 L1,11" fill="none" stroke="var(--_l)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- transitions -->
+  <g class="pele-edges" fill="none" stroke="var(--_l)" stroke-width="1.5">
+    <line class="pele-edge" x1="41" y1="100" x2="122" y2="100" marker-end="url(#pele-open-arrow)"/>
+    <line class="pele-edge" x1="314" y1="100" x2="458" y2="100" marker-end="url(#pele-open-arrow)"/>
+    <line class="pele-edge" x1="529" y1="87" x2="649" y2="44" marker-end="url(#pele-open-arrow)"/>
+    <line class="pele-edge" x1="529" y1="113" x2="649" y2="175" marker-end="url(#pele-open-arrow)"/>
+  </g>
+
+  <!-- transition labels -->
+  <g class="pele-edge-labels" font-size="16" text-anchor="middle">
+    <text class="pele-label" x="386" y="92">marked</text>
+    <text class="pele-label" transform="translate(589,65.5) rotate(-19.7)" y="-7">[&lt; 40%]</text>
+    <text class="pele-label" transform="translate(589,144) rotate(27.3)" y="18">[&gt;= 40%]</text>
+  </g>
+
+  <!-- nodes -->
+  <g class="pele-nodes">
+    <g class="pele-node pele-initial" data-id="initial">
+      <circle cx="23" cy="100" r="18" fill="var(--_l)"/>
+    </g>
+    <g class="pele-node pele-state" data-id="Submitted" transform="translate(219,100)">
+      <rect x="-95" y="-26" width="190" height="52" rx="10" fill="var(--_s)" stroke="var(--_b)"/>
+      <text class="pele-label" x="0" y="7" text-anchor="middle">Submitted</text>
+    </g>
+    <g class="pele-node pele-decision" data-id="grade" transform="translate(506,100)">
+      <polygon points="0,-26 46,0 0,26 -46,0" fill="var(--_s)" stroke="var(--_b)" stroke-linejoin="round"/>
+      <text class="pele-label" x="0" y="5.5" font-size="16" text-anchor="middle">grade</text>
+    </g>
+    <g class="pele-node pele-state" data-id="NeedsImproving" transform="translate(746,42)">
+      <rect x="-95" y="-34" width="190" height="68" rx="10" fill="var(--_s)" stroke="var(--_b)"/>
+      <text class="pele-label" text-anchor="middle"><tspan x="0" y="-5">Needs</tspan><tspan x="0" y="19">improving</tspan></text>
+    </g>
+    <g class="pele-node pele-state" data-id="Passed" transform="translate(746,176)">
+      <rect x="-95" y="-26" width="190" height="52" rx="10" fill="var(--_s)" stroke="var(--_b)"/>
+      <text class="pele-label" x="0" y="7" text-anchor="middle">Passed</text>
+    </g>
+  </g>
+</svg>
